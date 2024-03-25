@@ -6,6 +6,7 @@ import ProjectCard from "./ProjectCard";
 import axios from "axios";
 import "bootstrap/dist/css/bootstrap.min.css";
 import { PaginationControl } from "react-bootstrap-pagination-control";
+import API_TOKEN from "../../.env"
 
 const dummyProject = {
   name: null,
@@ -35,7 +36,7 @@ const Project = ({ heading, username, length, specfic }) => {
     try {
       // getting all repos
       const response = await axios.get(allReposAPI, {
-        headers: { Authorization: "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" },
+        headers: { Authorization: API_TOKEN },
         params: {
           per_page: "6",
           page: `${page}`,
