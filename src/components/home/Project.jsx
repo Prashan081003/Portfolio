@@ -36,7 +36,7 @@ const Project = ({ heading, username, length, specfic }) => {
     try {
       // getting all repos
       const response = await axios.get(allReposAPI, {
-        headers: { Authorization: API_TOKEN },
+        headers: { Authorization: API_TOKEN.API_TOKEN },
         params: {
           per_page: "6",
           page: `${page}`,
